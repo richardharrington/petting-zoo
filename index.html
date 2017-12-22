@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline' *; img-src *; font-src https://fonts.gstatic.com;">
-
+  <title>Teixeira Family Petting Zoo</title>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline' *; script-src 'unsafe-inline'; img-src *; font-src https://fonts.gstatic.com;">
   <link href="https://fonts.googleapis.com/css?family=Rye|Sevillana|Trochut" rel="stylesheet">
   <style type="text/css">
     * {
@@ -15,9 +14,14 @@
       height: 95%;
       font-size: 30px;
     }
+    .main-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5em;
+      text-align: center;
+    }
     .container {
       height: 100%;
-      padding: 25px;
+      padding: 80px 120px 120px 120px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -27,30 +31,39 @@
     .item {
       width: 150px;
       height: 150px;
-      padding: 5px;
       text-align: center;
-      transition: 3s ease;
+      transition: 1.5s ease-out;
     }
 
-    @media screen and (min-width: 700px) and (min-height: 300px) {
+    .item.bel {
+      font-family: 'Rye', cursive;
+    }
+
+    .item.fergie {
+      font-family: 'Sevillana', cursive;
+    }
+
+    .item.bun-bun {
+      font-family: 'Trochut', cursive;
+    }
+
+    @media screen and (min-width: 970px) and (min-height: 450px) {
       .animated .item {
         border: 1px solid black;
-        transform: rotate(1turn) scale(2);
+        transform: translateY(30px) scale(2) rotate(3turn);
+        transform-origin: center center;
       }
       .animated .item.bel {
-        font-family: 'Rye', cursive;
         align-self: flex-start;
         background-image: url(images/bel.jpg);
       }
 
-      .animated .item.fergs {
-        font-family: 'Sevillana', cursive;
+      .animated .item.fergie {
         align-self: center;
         background-image: url(images/fergie.jpg);
       }
 
       .animated .item.bun-bun {
-        font-family: 'Trochut', cursive;
         align-self: flex-end;
         background-image: url(images/bun-bun.png);
         background-position: center bottom;
@@ -61,10 +74,17 @@
   </style>
 </head>
 <body>
-  <div class="container animated">
+  <h1 class="main-title">Presenting the World-Famous<br>Teixeira Family Petting Zoo</h1>
+  <div class="container">
     <div class="item bel">“Bel” Beliza</div>
-    <div class="item fergs">“Fergs” Fergie</div>
+    <div class="item fergie">“Fergs” Fergie</div>
     <div class="item bun-bun">“Bun-Bun” Mr. Bunny Bun-Bun</div>
   </div>
+
+  <script>
+    setTimeout(() => {
+      document.querySelector('.container').classList.add('animated');
+    }, 3000)
+  </script>
 </body>
 </html>
