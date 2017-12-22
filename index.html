@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="https://fonts.googleapis.com/css?family=Rye|Sevillana|Trochut" rel="stylesheet">
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 95%;
+      font-size: 30px;
+    }
+    .container {
+      height: 100%;
+      padding: 25px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      transition: 1s ease;
+    }
+
+    .item {
+      width: 150px;
+      height: 150px;
+      padding: 5px;
+      text-align: center;
+      transition: 3s ease;
+    }
+
+    @media screen and (min-width: 700px) and (min-height: 300px) {
+      .animated .item {
+        border: 1px solid black;
+        transform: rotate(1turn) scale(2);
+      }
+      .animated .item.bel {
+        font-family: 'Rye', cursive;
+        align-self: flex-start;
+        background-image: url(images/bel.jpg);
+      }
+
+      .animated .item.fergs {
+        font-family: 'Sevillana', cursive;
+        align-self: center;
+        background-image: url(images/fergie.jpg);
+      }
+
+      .animated .item.bun-bun {
+        font-family: 'Trochut', cursive;
+        align-self: flex-end;
+        background-image: url(images/bun-bun.png);
+        background-position: center bottom;
+        background-size: 70%;
+        background-repeat: no-repeat;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container animated">
+    <div class="item bel">“Bel” Beliza</div>
+    <div class="item fergs">“Fergs” Fergie</div>
+    <div class="item bun-bun">“Bun-Bun” Mr. Bunny Bun-Bun</div>
+  </div>
+</body>
+</html>
