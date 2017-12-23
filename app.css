@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 95%;
+  font-size: 30px;
+  color: #222;
+  background-color: pink; /* #ffc0cb */
+}
+.main-title {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.25em;
+  text-align: center;
+}
+.container {
+  height: 100%;
+  padding: 80px 120px 120px 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: 1s ease;
+}
+
+.item {
+  cursor: pointer;
+  width: 160px;
+  height: 160px;
+  padding: 5px 10px 10px 10px;
+  text-align: center;
+  transition: 1.5s ease-out;
+}
+
+.item.fergie {
+  width: 180px;
+  font-family: 'Sevillana', cursive;
+}
+
+.item.bel {
+  width: 170px;
+  font-family: 'Rye', cursive;
+}
+
+.item.bun-bun {
+  width: 160px;
+  font-family: 'Trochut', cursive;
+}
+
+.item > * {
+  margin-bottom: 5px;
+}
+
+.animal-alias {
+  opacity: 0;
+}
+
+.animated {
+  background-color: #f4f4f4;
+  border: 1px solid #555;
+  transform: translateY(45px) scale(2) rotate(3turn);
+  transform-origin: center center;
+}
+
+.animated.fergie {
+  text-align: left;
+  background-image: url(images/fergie.png);
+  background-position: 95% 70%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+
+.animated.bel {
+  text-align: left;
+  background-image: url(images/bel.png);
+  background-position: 95% 20%;
+  background-size: 25%;
+  background-repeat: no-repeat;
+}
+
+.animated.bun-bun {
+  text-align: left;
+  background-image: url(images/bun-bun.png);
+  background-position: 95% 60%;
+  background-size: 60%;
+  background-repeat: no-repeat;
+}
+
+.animated .animal-name {
+  font-size: 0.75em;
+}
+
+.animated .animal-alias {
+  opacity: 1;
+  font-size: 0.5em;
+}
