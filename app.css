@@ -20,10 +20,9 @@ html, body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  transition: 1s ease;
 }
 
-.item {
+.animal {
   cursor: pointer;
   height: 160px;
   padding: 5px 10px 10px 10px;
@@ -31,42 +30,46 @@ html, body {
   transition: 1.5s ease-out;
 }
 
-.item.intro {
-  transform: scale(0.01);
-  transform-origin: center top;
-}
-
-.item.fergie {
+.animal.fergie {
   width: 180px;
   font-family: 'Sevillana', cursive;
 }
 
-.item.bel {
+.animal.bel {
   width: 170px;
   font-family: 'Rye', cursive;
 }
 
-.item.bun-bun {
+.animal.bun-bun {
   width: 160px;
   font-family: 'Trochut', cursive;
 }
 
-.item > * {
+.animal > * {
   margin-bottom: 5px;
 }
 
-.animal-alias {
+.name {
+  transition: 1s ease;
+}
+
+.container.start-out-small .name {
+  transform: scale(0.01);
+  transform-origin: center top;
+}
+
+.alias {
   opacity: 0;
 }
 
-.animated {
+.animal.animated {
   background-color: #f4f4f4;
   border: 1px solid #555;
   transform: translateY(45px) scale(2) rotate(3turn);
   transform-origin: center center;
 }
 
-.animated.fergie {
+.animal.animated.fergie {
   text-align: left;
   background-image: url(images/fergie.png);
   background-position: 95% 70%;
@@ -74,7 +77,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-.animated.bel {
+.animal.animated.bel {
   text-align: left;
   background-image: url(images/bel.png);
   background-position: 95% 20%;
@@ -82,7 +85,7 @@ html, body {
   background-repeat: no-repeat;
 }
 
-.animated.bun-bun {
+.animal.animated.bun-bun {
   text-align: left;
   background-image: url(images/bun-bun.png);
   background-position: 95% 60%;
@@ -90,11 +93,23 @@ html, body {
   background-repeat: no-repeat;
 }
 
-.animated .animal-name {
+.animal.animated .name {
   font-size: 0.75em;
 }
 
-.animated .animal-alias {
+.animal.animated.fergie .name {
+  font-size: 0.9em;
+}
+
+.animal.animated .alias {
   opacity: 1;
   font-size: 0.5em;
+}
+
+.animal.animated.bel .alias {
+  font-size: 0.4em;
+}
+
+.animal.animated .alias.criminal {
+  transition: 0.6s 2.5s ease;
 }

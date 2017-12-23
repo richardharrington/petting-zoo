@@ -8,40 +8,34 @@
 </head>
 <body>
   <h1 class="main-title">Presenting the World-Famous<br>Teixeira Family Petting Zoo</h1>
-  <div class="container">
-    <div class="item intro fergie">
-      <div class="animal-name">Fergie</div>
-      <div class="animal-alias">aka<br>“Fergs”</div>
-      <div class="animal-alias">aka<br> “Fergilicious”</div>
+  <div class="container start-out-small">
+    <div class="animal fergie">
+      <div class="name">Fergie</div>
+      <div class="alias">aka<br>“Fergs”</div>
+      <div class="alias">aka<br> “Fergilicious”</div>
     </div>
-    <div class="item intro bel">
-      <div class="animal-name">Beleza</div>
-      <div class="animal-alias">aka<br>“Bel”</div>
-      <div class="animal-alias">aka<br>“Biaou Biaou”</div>
+    <div class="animal bel">
+      <div class="name">Beleza</div>
+      <div class="alias">aka<br>“Bel”</div>
+      <div class="alias">aka<br>“Biaou Biaou”</div>
+      <div class="alias criminal">aka<br>“El Buño”</div>
     </div>
-    <div class="item intro bun-bun">
-      <div class="animal-name">Mr. Bunny Bun-Bun</div>
-      <div class="animal-alias">aka<br>“Bun-Bun”</div>
-      <div class="animal-alias">aka<br>“Bun Love”</div>
+    <div class="animal bun-bun">
+      <div class="name">Mr. Bunny Bun-Bun</div>
+      <div class="alias">aka<br>“Bun-Bun”</div>
+      <div class="alias">aka<br>“Bun Love”</div>
     </div>
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var items = document.querySelectorAll('.item');
-      for (i = 0; i < items.length; i++) {
-        (function(i) {
-          setTimeout(() => {
-            console.log(items[i])
-            items[i].classList.remove('intro')
-          }, 0);
-          items[i].addEventListener('click', function(event) {
-            items[i].classList.toggle('animated');
-          });
-        })(i);
-      }
+    const container = document.querySelector('.container');
+    container.addEventListener('click', function(event) {
+      const animal = event.target.parentNode;
+      animal.classList.toggle('animated');
     });
-
+    setTimeout(function() {
+      container.classList.remove('start-out-small');
+    }, 0);
  </script>
 </body>
 </html>
