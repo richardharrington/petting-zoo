@@ -52,6 +52,7 @@ html, body {
 }
 
 .name {
+  padding-bottom: 10px;
   transition: 1s ease;
 }
 
@@ -65,6 +66,7 @@ html, body {
 }
 
 .animal.animated {
+  text-align: left;
   background-color: #f4f4f4;
   border: 1px solid #555;
   transform: translateY(45px) scale(2) rotate(3turn);
@@ -72,7 +74,6 @@ html, body {
 }
 
 .animal.animated.fergie {
-  text-align: left;
   background-image: url(images/fergie.png);
   background-position: 95% 70%;
   background-size: 50%;
@@ -80,22 +81,28 @@ html, body {
 }
 
 .animal.animated.bel {
-  text-align: left;
   background-image: url(images/bel.png);
-  background-position: 95% 20%;
+  background-position: 92% 31%;
   background-size: 25%;
   background-repeat: no-repeat;
 }
 
 .animal.animated.bun-bun {
-  text-align: left;
   background-image: url(images/bun-bun.png);
   background-position: 95% 95%;
   background-size: 60%;
   background-repeat: no-repeat;
 }
 
-.animal.animated .name {
+.animal.animated.fergie .name {
+  font-size: 1em;
+}
+
+.animal.animated.bel .name {
+  font-size: 0.9em;
+}
+
+.animal.animated.bun-bun .name {
   font-size: 0.75em;
 }
 
