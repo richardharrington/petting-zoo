@@ -28,20 +28,22 @@ html, body {
   height: 160px;
   padding: 5px 10px 10px 10px;
   text-align: center;
-  transition: 1.5s ease-out;
 }
 
 .animal.fergie {
+  transition: 4s ease-out;
   width: 180px;
   font-family: 'Sevillana', cursive;
 }
 
 .animal.bel {
+  transition: 2.5s ease-out;
   width: 170px;
   font-family: 'Rye', cursive;  font-size: 0.8em;
 }
 
 .animal.bun-bun {
+  transition: 3s ease-out;
   width: 160px;
   font-family: 'Trochut', cursive;
   font-weight: bold;
@@ -119,5 +121,5 @@ html, body {
 .animal.animated .alias.criminal {
   font-size: 0.6em;
   font-style: italic;
-  transition: 0.75s 2.5s ease;
+  transition: 0.75s 7.25s ease;
 }
