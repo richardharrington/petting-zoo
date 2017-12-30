@@ -33,6 +33,7 @@
   <script>
     const container = document.querySelector('.container');
 
+    // Set the animals to display and play music when clicked
     container.addEventListener('click', function(event) {
       const animal = event.target.parentNode;
       animal.classList.toggle('animated');
@@ -42,10 +43,15 @@
       sound.play();
     });
 
+    // Increase the size of the animal names
     setTimeout(function() {
       container.classList.remove('start-out-small');
     }, 0);
 
+    // Cache the animal pics
+    ['bel', 'bun-bun', 'fergie'].forEach(function(animal) {
+      new Image().src = 'images/' + animal + '.png';
+    });
  </script>
 </body>
 </html>
