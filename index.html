@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Teixeira Family Petting Zoo</title>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; script-src 'unsafe-inline'; img-src *; font-src 'self' https://fonts.gstatic.com;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; script-src 'self'; img-src *; font-src 'self' https://fonts.gstatic.com;">
   <link href="https://fonts.googleapis.com/css?family=Rye|Sevillana|Trochut:400i,700|Abril+Fatface" rel="stylesheet">
   <link href="app.css" rel="stylesheet">
 </head>
@@ -13,45 +13,19 @@
       <div class="name">Fergie</div>
       <div class="alias">aka<br> “Fergilicious”</div>
       <div class="alias">aka<br>“Fergs”</div>
-      <audio class="audio-player" src="sounds/fergie.mp3"></audio>
     </div>
     <div class="animal bel">
       <div class="name">Beleza</div>
       <div class="alias">aka<br>“Bel”</div>
       <div class="alias">aka<br>“Biaou Biaou”</div>
-      <audio class="audio-player" src="sounds/bel.mp3"></audio>
     </div>
     <div class="animal bun-bun">
       <div class="name">Mr. Bunny Bun-Bun</div>
       <div class="alias">aka<br>“Bun-Bun”</div>
       <div class="alias">aka<br>“Bun Love”</div>
       <div class="alias criminal">aka<br>“El Buño”</div>
-      <audio class="audio-player" src="sounds/bun-bun.mp3"></audio>
     </div>
   </div>
-
-  <script>
-    const container = document.querySelector('.container');
-
-    // Set the animals to display and play music when clicked
-    container.addEventListener('click', function(event) {
-      const animal = event.target.parentNode;
-      animal.classList.toggle('animated');
-
-      let sound = animal.querySelector('.audio-player');
-      sound.currentTime = 0;
-      sound.play();
-    });
-
-    // Increase the size of the animal names
-    setTimeout(function() {
-      container.classList.remove('start-out-small');
-    }, 0);
-
-    // Cache the animal pics
-    ['bel', 'bun-bun', 'fergie'].forEach(function(animal) {
-      new Image().src = 'images/' + animal + '.png';
-    });
- </script>
+  <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
