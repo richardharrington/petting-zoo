@@ -45,7 +45,7 @@ html, body {
   transition-property: height, transform, background-color, background-position, background-size;
   transition-duration: 2.5s, 2.5s, 2.5s, .35s, .35s;
   transition-delay: 0s, 0s, 0s, 2.35s, 2.35s;
-  transition-timing-function: ease-out;
+  transition-timing-function: ease-out, ease-out, ease-out, ease, ease;
   background-position: 92% 10%;
   background-size: 0;
   width: 170px;
@@ -54,9 +54,9 @@ html, body {
 
 .animal.bun-bun {
   transition-property: height, transform, background-color, background-position, background-size;
-  transition-duration: 3s, 3s, 3s, .25s, .25s;
-  transition-delay: 0s, 0s, 0s, 7s, 7s;
-  transition-timing-function: ease-out;
+  transition-duration: 5s, 5s, 5s, 1.9s, 1.9s;
+  transition-delay: 0s, 0s, 0s, 5.45s, 5.45s;
+  transition-timing-function: ease-out, ease-out, ease-out, steps(3, end), steps(3, end);
   background-position: 0% 95%;
   background-size: 0;
   width: 160px;
