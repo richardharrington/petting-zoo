@@ -31,19 +31,34 @@ html, body {
 }
 
 .animal.fergie {
-  transition: 4s ease-out;
+  transition-property: height, transform, background-color, background-position, background-size;
+  transition-duration: 4s, 4s, 4s, .4s, .4s;
+  transition-delay: 0s, 0s, 0s, 3.8s, 3.8s;
+  transition-timing-function: ease-out, ease-out, ease-out, ease, ease;
+  background-position: 95% 90%;
+  background-size: 0;
   width: 180px;
   font-family: 'Sevillana', cursive;
 }
 
 .animal.bel {
-  transition: 2.5s ease-out;
+  transition-property: height, transform, background-color, background-position, background-size;
+  transition-duration: 2.5s, 2.5s, 2.5s, .35s, .35s;
+  transition-delay: 0s, 0s, 0s, 2.35s, 2.35s;
+  transition-timing-function: ease-out;
+  background-position: 92% 10%;
+  background-size: 0;
   width: 170px;
   font-family: 'Rye', cursive;  font-size: 0.8em;
 }
 
 .animal.bun-bun {
-  transition: 3s ease-out;
+  transition-property: height, transform, background-color, background-position, background-size;
+  transition-duration: 3s, 3s, 3s, .25s, .25s;
+  transition-delay: 0s, 0s, 0s, 7s, 7s;
+  transition-timing-function: ease-out;
+  background-position: 0% 95%;
+  background-size: 0;
   width: 160px;
   font-family: 'Trochut', cursive;
   font-weight: bold;
